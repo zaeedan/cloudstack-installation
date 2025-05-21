@@ -10,14 +10,10 @@ Contributors :
 - Rizqi Zaidan (2206059742)
 
 ## Tujuan Proyek
-
-```
-CPU :
-RAM :
-Penyimpanan :
-Network :
-Sistem Operasi : Ubuntu Server 24.04
-```
+#### 1. Membangun dan Mengkonfigurasi Private Cloud Berbasis Apache CloudStack
+#### 2. Memahami Arsitektur dan Komponen Cloud Computing Secara Praktis
+#### 3. Mengembangkan Kemampuan Deploy dan Manajemen VM melalui Web UI dan API
+#### 4. Mempelajari Integrasi Komponen Virtualisasi dan Storage dalam Lingkungan Cloud
 
 ## Apa Itu Cloudstack
 Apache CloudStack adalah platform open-source untuk membangun, mengelola, dan mengoperasikan infrastruktur cloud computing yang skalabel. Dalam implementasi private cloud, CloudStack memungkinkan organisasi untuk menyediakan sumber daya komputasi (seperti VM, storage, dan jaringan) secara on-demand di dalam lingkungan tertutup dan aman.
@@ -44,7 +40,7 @@ KVM (Kernel-based Virtual Machine) – digunakan untuk menjalankan VM di host Li
 NFS (Network File System) – digunakan sebagai primary storage untuk menyimpan disk VM.
 #### 3. Network:
 Virtual Router – menyediakan layanan DHCP, firewall, NAT, dan VPN untuk jaringan virtual.
-#### 4. Database Backend
+#### 4. Database Backend:
 MySQL atau MariaDB – digunakan untuk menyimpan konfigurasi dan metadata sistem cloud.
 #### 5. Orkestrasi & Manajemen:
 Management Server – mengatur provisioning, monitoring, dan kontrol seluruh resource cloud.
@@ -52,19 +48,31 @@ Management Server – mengatur provisioning, monitoring, dan kontrol seluruh res
 Multi-zone architecture – memungkinkan pengelolaan beberapa data center dalam satu platform terpusat.
 
 ## Arsitektur Sistem
-Apache CloudStack menggunakan struktur hierarkis untuk mengatur infrastruktur cloud secara efisien. Gambar tersebut menggambarkan satu Zone, yang terdiri dari satu atau lebih Pod, yang di dalamnya terdapat Cluster, Host, dan Primary Storage. Selain itu, terdapat Secondary Storage yang terpisah namun terhubung ke seluruh zone.
+<img src="https://github.com/user-attachments/assets/62652671-4837-4fec-a694-190a61a7f24a" alt="arsitektur" width="400"/>
+
+Apache CloudStack menggunakan struktur hierarkis untuk mengatur infrastruktur cloud secara efisien. Gambar di atas menggambarkan satu Zone, yang terdiri dari satu atau lebih Pod, yang di dalamnya terdapat Cluster, Host, dan Primary Storage. Selain itu, terdapat Secondary Storage yang terpisah namun terhubung ke seluruh zone.
 #### 1. Zone:
 * Mewakili satu data center atau lokasi fisik.
 * Setiap zone memiliki akses ke Secondary Storage.
 * Bisa terdiri dari satu atau beberapa pod.
 #### 2. Pod:
-NFS (Network File System) – digunakan sebagai primary storage untuk menyimpan disk VM.
-#### 3. Network:
-Virtual Router – menyediakan layanan DHCP, firewall, NAT, dan VPN untuk jaringan virtual.
-#### 4. Database Backend
-MySQL atau MariaDB – digunakan untuk menyimpan konfigurasi dan metadata sistem cloud.
-#### 5. Orkestrasi & Manajemen:
-Management Server – mengatur provisioning, monitoring, dan kontrol seluruh resource cloud.
-#### 5. Skalabilitas & High Availability:
-Multi-zone architecture – memungkinkan pengelolaan beberapa data center dalam satu platform terpusat.
+* Unit dalam zone yang biasanya mewakili satu rak fisik atau segmen jaringan.
+* Terdiri dari satu atau lebih Cluster.
+#### 3. Cluster:
+* Sekumpulan host (server fisik) yang menjalankan hypervisor yang sama.
+* Mengakses Primary Storage bersama.
+* Digunakan untuk menjalankan VM dan mengelola resource compute.
+#### 4. Host:
+* Server fisik yang menjalankan VM melalui hypervisor (misalnya KVM).
+* Terhubung ke Primary Storage untuk menyimpan disk image VM.
+#### 5. Primary Storage:
+* Menyimpan disk utama untuk VM yang berjalan di cluster.
+* Bersifat shared di antara host dalam satu cluster.
+#### 6. Secondary Storage:
+* Digunakan untuk menyimpan: ISO (installer VM), Template VM, Snapshot
+
+## Referensi
+* P. Loshin, "Network File System (NFS)" TechTarget. [Online]. Available: https://www.techtarget.com/searchenterprisedesktop/definition/Network-File-System. [Accessed: May 21, 2025].
+* "What is Apache CloudStack?" Apache Cloudstack. [Online]. Available: https://docs.cloudstack.apache.org/en/4.11.1.0/conceptsandterminology/concepts.html. [Accessed: May 21, 2025].
+* "Apa Itu KVM (Mesin Virtual Berbasis Kernel)?" AWS. [Online]. Available: https://aws.amazon.com/id/what-is/kvm/. [Accessed: May 21, 2025].
 
