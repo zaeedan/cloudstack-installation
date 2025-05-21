@@ -196,7 +196,7 @@ cloudstack-setup-management
 systemctl status cloudstack-management
 ```
 
-## Akses Interface Web
+## Akses Dashboard Web
 ```
 http://100.96.38.24/client
 ```
