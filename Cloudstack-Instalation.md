@@ -8,7 +8,7 @@
 Alamat jaringan : 192.168.18.0/24
 Alamat IP Host : 192.168.18.X/24
 Gateway : 192.168.18.1
-IP Publik : 100.96.X.X (Menggunakan TailStack)
+IP Publik : 100.96.X.X (Menggunakan TailScale)
 ```
 
 ## Network Configuration
@@ -190,7 +190,7 @@ cloudstack-setup-management
 systemctl status cloudstack-management
 ```
 
-## Akses Dashboard Web (Menggunakan TailStack)
+## Akses Dashboard Web (Menggunakan TailScale)
 ```
 http://100.96.X.X/client
 ```
