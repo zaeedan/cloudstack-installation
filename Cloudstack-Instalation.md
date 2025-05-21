@@ -7,15 +7,7 @@ Contributors :
 - Muhammad Abrisam Cahyo Juhartono (2206026050)
 - Rizqi Zaidan (2206059742)
 
-## Hardware Specification
-
-```
-CPU :
-RAM :
-Penyimpanan :
-Network :
-Sistem Operasi : Ubuntu Server 24.04.2 LTS
-```
+## Operating System: Ubuntu Server 24.04.2 LTS
 
 ## Network Address
 
