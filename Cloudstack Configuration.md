@@ -100,6 +100,7 @@ Jika berhasil, maka tampilannya akan menjadi seperti ini.
 
 Compute Offering merupakan tempat konfigurasi CPU dan RAM untuk VM. Konfigurasi spesifikasi VM ini penting karena jika tidak dilakukan, CloudStack tidak akan tahu harus mengalokasikan resource sebesar apa untuk VM yang dibuat oleh user. Menu ini bisa dilihat dari menu utama Service Offerings. 
 Berikut adalah pengisian bagian compute offering:
+
 ![image](https://github.com/user-attachments/assets/febde1f0-280a-4b15-89fa-4c98cba7bcad)
 ![image](https://github.com/user-attachments/assets/e06ea6f1-6d96-46c1-bb82-a64e8b5375ec)
 
@@ -123,18 +124,23 @@ Cluster: cluster_kelompok5
 Host: cloudstack5
 ```
 3. Template/ISO: pilih informasi template/ISO yang telah di-input sebelumnya. Disini, kami menggunakan ISO Ubuntu 22 (Ubuntu_22) dengan Hypervisor jenis KVM.
+
 ![image](https://github.com/user-attachments/assets/b012861e-fde3-40f1-9751-546b2f572cbd)
 
 4. Compute offering: pilihlah hasil konfigurasi VM sesuai dengan spesifikasi yang diinginkan (yang telah dibuat sebelumnya).
+
 ![image](https://github.com/user-attachments/assets/fd73bb7a-dd5b-4258-93ef-c11ff83b58a2)
 
 5. Disk size: 30 GB
+
 ![image](https://github.com/user-attachments/assets/e9959335-1cd9-441d-a4fb-1b9386a73fcc)
 
-[Bagian SSH key pairs, Advanced mode, dan Details bersifat opsional]
+6. [Bagian SSH key pairs, Advanced mode, dan Details bersifat opsional]
+
 ![image](https://github.com/user-attachments/assets/4de0a605-c870-4d9c-aa4e-87d355c2df87)
 
 Jika sudah selesai mengisi dan berhasil add, maka tampilannya akan menjadi seperti ini. VM yang sudah berhasil dibuat sekarang dapat diakses. 
+
 ![image](https://github.com/user-attachments/assets/8dc0b3c0-6138-46ed-bc85-3c6cb1815e34)
 ![image](https://github.com/user-attachments/assets/d02e1b98-84ac-46cf-ba14-8b9f40f8bf90)
 
