@@ -90,6 +90,7 @@ Terakhir, launch zone yang sudah dibentuk. Dengan begitu, zone akan aktif dan da
 ## Insert Image Ubuntu ke VM
 
 Langkah upload image Ubuntu ini penting agar CloudStack bisa membuat VM dengan sistem operasi yang ditentukan, dan itu bisa terwujud dengan menyediakan sumber instalasi OS. Bentuknya bisa berupa ISO (CD installer) atau Template (berupa image disk yang siap dipakai). Tanpa image Ubuntu ini, VM tidak akan tahu sistem operasi apa yang harus dijalankan atau digunakan. Berikut adalah detail dari pengisian informasi yang dibutuhkan pada proses insert image Ubuntu:
+
 ![image](https://github.com/user-attachments/assets/3a68131f-266b-4d10-b404-4b13ab7ce9cf)
 
 Jika berhasil, maka tampilannya akan menjadi seperti ini.
