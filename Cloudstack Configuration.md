@@ -19,11 +19,13 @@ Di menu Zone, user akan melihat tampilan pertama sebagai berikut. User harus men
 - Edge: disebut lightweight zone, digunakan untuk layanan publik atau aplikasi yang diakses dari luar. Fungsionalitas terbatas dibandingkan tipe Core.
 Pada langkah ini, pilih yang tipe Core.
 ![image](https://github.com/user-attachments/assets/18755c8a-4fd5-4d41-aa6e-d32cf4e72235)
+
 Selanjutnya memilih Core Zone Type.
 - Advanced: lebih fleksibel dan bisa bikin banyak jaringan (public/private).
 - Basic: lebih sederhana, semua VM di 1 jaringan dan cocok untuk testing.
 Pada langkah ini, pilih yang tipe Basic karena user akan deploy VM yang memang ditujukan untuk melakukan testing saja.
 ![image](https://github.com/user-attachments/assets/8f68c20b-5d44-4747-ab85-d937a5f3b88b)
+
 Pada bagian Zone details, user akan diminta untuk mengatur informasi dasar mengenai zone (data center) yang dibentuk.
 Informasi yang diisi adalah:
 ```
@@ -37,6 +39,7 @@ Hypervisor: KVM
 Dilanjut ke bagian Network, disini user akan menentukan topologi jaringan dan membuat traffic type yang dibutuhkan oleh CloudStack.
 Namun karena tadi di bagian Core Zone type sudah memilih 'Basic', maka hanya akan ditampilkan 1 physical network yang berfungsi merepresentasikan jaringan fisik tunggal yang digunakan oleh semua jenis trafik.
 ![image](https://github.com/user-attachments/assets/03ba50e3-9118-4395-91c8-b57d2eaf4f92)
+
 Setiap zone harus memiliki satu atau lebih pod. Di bagian pod ini, user akan mengkonfigurasi informasi yang dibutuhkan oleh sebuah pod, seperti pod name (nama untuk identifikasi pod); reserved system gateway (IP address router jaringan local yang menghubungkan VM ke luar jaringan); reserved system netmask (ukuran subnet); start & end reserved system IP (IP address khusus CloudStack system VM). Berikut adalah detail dari pengisian informasi pada Pod:
 ```
 Pod name: kelompok5
@@ -46,6 +49,7 @@ Start reserved system IP: 192.168.18.11
 End reserved system IP: 192.168.18.20
 ```
 ![image](https://github.com/user-attachments/assets/eb27938b-b994-4c46-9c6a-894201ade06a)
+
 Setelah Pod, user diarahkan ke bagian Guest Network Traffic. Bagian ini menentukan jenis trafik untuk VM (dari dan antar VM). IP address yang diambil berasal dari range IP address yang sudah ditentukan di Pod.
 ```
 Guest gateway: 192.168.18.1
