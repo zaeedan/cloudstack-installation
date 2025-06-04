@@ -69,7 +69,7 @@ reboot                  # Memulai ulang sistem
 sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
 
-### Menambahkan Command Dibawah mysqld.cnf
+### Menambahkan Command
 
 ```
 innodb_rollback_on_timeout=1
