@@ -198,3 +198,8 @@ systemctl status cloudstack-management
 ```
 http://100.96.X.X/client
 ```
+
+## Akses Dashboard Web (Menggunakan TailScale)
+```
+https://youtu.be/8Q_Ryfe1goc
+```
