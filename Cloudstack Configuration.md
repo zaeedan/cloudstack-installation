@@ -35,6 +35,7 @@ IPv4 DNS2: 1.1.1.1
 Internal DNS 1: 192.168.18.1
 Hypervisor: KVM
 ```
+![image](https://github.com/user-attachments/assets/bfd5e1f1-b77e-4812-9423-2a4388995bcb)
 
 Dilanjut ke bagian Network, disini user akan menentukan topologi jaringan dan membuat traffic type yang dibutuhkan oleh CloudStack.
 Namun karena tadi di bagian Core Zone type sudah memilih 'Basic', maka hanya akan ditampilkan 1 physical network yang berfungsi merepresentasikan jaringan fisik tunggal yang digunakan oleh semua jenis trafik.
@@ -57,11 +58,18 @@ Guest netmask: 255.255.255.0
 Guest start IP: 192.168.18.21
 Guest end IP: 192.168.18.10
 ```
+![image](https://github.com/user-attachments/assets/206ee0ae-fdfa-4f98-800a-42224a734c85)
+
+
 Langkah selanjutnya adalah Add resources. Di bagian ini, terdapat beberapa sub-step yang harus dilakukan.
+
 a. Cluster: kumpulan host (server KVM) yang pakai jenis hypervisor sama. Semua host di dalam cluster ini akan berada di subnet yang sama dan mengakses shared storage yang sama pula.
 ```
 Cluster name: kelompok5
 ```
+![image](https://github.com/user-attachments/assets/23394d3c-7a8f-4c62-9e72-85f9e7f8c0dd)
+
+
 b. IP address: mengkonfigurasi informasi dari host (assign alamat ip) agar host dapat bekerja di dalam CloudStack.
 ```
 Host name: 192.168.18.250
@@ -69,6 +77,9 @@ Username: root
 Authentication Method: Password | System SSH Key
 Password: 
 ```
+![image](https://github.com/user-attachments/assets/f0b56cbf-2d6d-48e3-86a7-47728d06c3c7)
+
+
 c. Primary Storage: tempat nyimpan disk utama VM yang berjalan pada semua host yang ada di dalam cluster.
 ```
 Name: primaryStorage_kelompok5
@@ -78,6 +89,9 @@ Server: 192.168.18.250
 Path: /export/primary
 Provide: DefaultPrimary
 ```
+![image](https://github.com/user-attachments/assets/340f1c1b-676b-4639-90f6-99eb92cd4745)
+
+
 d. Secondary Storage: tempat untuk menyimpan template, ISO, dan Snapshot.
 ```
 Provider: NFS
@@ -85,6 +99,9 @@ Name: secondaryStorage_kelompok5
 Server: 192.168.18.250
 Path: /export/secondary
 ```
+![image](https://github.com/user-attachments/assets/c3a6b3bc-4a7b-47ff-80ff-ebb038637e4d)
+
+
 Terakhir, launch zone yang sudah dibentuk. Dengan begitu, zone akan aktif dan dapat digunakan untuk menjalankan VM.
 
 ## Insert Image Ubuntu ke VM
@@ -145,6 +162,7 @@ Jika sudah selesai mengisi dan berhasil add, maka tampilannya akan menjadi seper
 ![image](https://github.com/user-attachments/assets/d02e1b98-84ac-46cf-ba14-8b9f40f8bf90)
 
 Melakukan akses ke VM:
+
 ![image](https://github.com/user-attachments/assets/a9f5f9a4-ac25-468c-b78c-b1d4f2cd3882)
 
 ## Akses VM Lewat SSH (Port Forwarding)
@@ -166,6 +184,7 @@ sudo apt install apache2
 sudo mkdir /var/www/gci/
 ```
 Lalu, isi file html-nya dengan informasi berikut.
+
 ![image](https://github.com/user-attachments/assets/9584aaa5-12fc-4d67-87d8-e6bf246e39d5)
 
 3. Lakukan autentikasi
@@ -175,6 +194,7 @@ sudo cp 000-default.conf gci.conf
 sudo a2ensite gci.conf
 ```
 Tampilan:
+
 ![image](https://github.com/user-attachments/assets/be547b85-32f5-4143-a535-008a2ce04436)
 
 4. Ping website untuk memeriksa apakah website berhasil dibuat.
