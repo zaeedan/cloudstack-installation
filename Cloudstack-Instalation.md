@@ -63,27 +63,18 @@ reboot                  # Memulai ulang sistem
 
 ## Menginstall Software Cloudstack Management Server Ke Ubuntu 
 
-### Memakai Command (dan MySQL):
+### Konfigurasi MariaDB
 
 ```
-apt update -y
-sudo apt install cloudstack-management mysql-server -y
-```
-
-### Konfigurasi MySQL
-
-```
-nano /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
 
 ### Menambahkan Command Dibawah mysqld.cnf
 
 ```
-server-id = 1
-sql-mode="STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION,ERROR_FOR_DIVISION_BY_ZERO,NO_ZERO_DATE,NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION"
 innodb_rollback_on_timeout=1
 innodb_lock_wait_timeout=600
-max_connections=1000
+max_connections=350
 log-bin=mysql-bin
 binlog-format = 'ROW'
 ```
@@ -91,7 +82,7 @@ binlog-format = 'ROW'
 ### Restart MySQL
 
 ```
-systemctl restart mysql
+sudo systemctl restart mariadb
 ```
 
 ### Setup Database Dan Management Service.
