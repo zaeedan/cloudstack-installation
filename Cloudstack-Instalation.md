@@ -79,7 +79,7 @@ log-bin=mysql-bin
 binlog-format = 'ROW'
 ```
 
-### Restart MySQL
+### Restart MariaDB
 
 ```
 sudo systemctl restart mariadb
