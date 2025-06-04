@@ -35,8 +35,8 @@ network:
     wlp0s20f3:
       optional: true
       access-points:
-        "Sutandar Network":
-          password: "stdA86F1"
+        "XXX": # Access Point name
+          password: "XXX" # Password
       dhcp4: true
   bridges:
     cloudbr0:
