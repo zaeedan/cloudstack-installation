@@ -26,18 +26,31 @@ Kemudian, modifikasi isi berkas konfigurasi menjadi seperti berikut:
 
 ```
 network:
-  version: 2
-  renderer: networkd
   ethernets:
     enp1s0:
       dhcp4: false
-      addresses:
-        - 192.168.18.X/24  # Alamat IP host
-      gateway4: 192.168.18.1  # Gateway
+      dhcp6: false
+      optional: true
+  wifis:
+    wlp0s20f3:
+      optional: true
+      access-points:
+        "Sutandar Network":
+          password: "stdA86F1"
+      dhcp4: true
+  bridges:
+    cloudbr0:
+      addresses: [192.168.18.250/24]  # Alamat IP host
+      routes:
+        - to: default
+          via: 192.168.18.1 # Gateaway
       nameservers:
-        addresses:
-          - 1.1.1.1
-          - 8.8.8.8
+        addresses: [1.1.1.1,8.8.8.8]
+      interfaces: [enp1s0]
+      dhcp4: false
+      dhcp6: false
+      parameters:
+        stp: false
 ```
 
 ### Terapkan Konfigurasi Jaringan
