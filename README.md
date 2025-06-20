@@ -9,6 +9,7 @@ Contributors :
 - Muhammad Abrisam Cahyo Juhartono (2206026050)
 - Rizqi Zaidan (2206059742)
 
+# I. Mengenai Cloudstack
 ## Tujuan Proyek
 #### 1. Membangun dan Mengkonfigurasi Private Cloud Berbasis Apache CloudStack
 #### 2. Memahami Arsitektur dan Komponen Cloud Computing Secara Praktis
@@ -77,7 +78,8 @@ Apache CloudStack menggunakan struktur hierarkis untuk mengatur infrastruktur cl
 * "Apa Itu KVM (Mesin Virtual Berbasis Kernel)?" AWS. [Online]. Available: https://aws.amazon.com/id/what-is/kvm/. [Accessed: May 21, 2025].
 
 
-# Instalasi Dan Konfigurasi Apache Cloudstack Private Cloud
+
+# II. Instalasi Dan Konfigurasi Apache Cloudstack Private Cloud
 
 ## Operating System: Ubuntu Server 24.04.2 LTS
 
@@ -283,7 +285,7 @@ http://100.96.X.X/client
 https://youtu.be/8Q_Ryfe1goc
 ```
 
-# Membangun Infrastruktur Cloud Service
+# III. Membangun Infrastruktur Cloud Service
 ![image](https://github.com/user-attachments/assets/68bc24c6-5799-47d5-9f3b-f839d1b6e0bd)
 
 ## Mengakses Web Cloudstack
